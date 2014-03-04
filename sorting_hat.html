@@ -17,25 +17,37 @@
     <h1>Sorting Hat</h1>
     
     <div class="container">
-        <div class="house col-md-2">
+        <div class="form">
+            <input type="number" id="student_count">
+            <button id="set_student_count"> Set Student Count</button>
+            <div id="count"></div>
+        </div>
+        <div class="form">
+            <input type="text" id="student_name">
+            <button id="sort_student">Sort!</button>
+            <div id="sort"></div>
+        </div>
+        <div class="house col-md-2" id="Gryffindor">
             Gryffindor
         </div>
-        <div class="house col-md-2">
+        <div class="house col-md-2" id="Hufflepuff">
             Hufflepuff
         </div>
-        <div class="house col-md-2">
+        <div class="house col-md-2" id="Ravenclaw">
             Ravenclaw
         </div>
-        <div class="house col-md-2">
+        <div class="house col-md-2" id="Slytherin">
             Slytherin
         </div>
-        <div class="house col-md-2">
-            Dumbledore's Army
+        <div class="house col-md-2" id="DeathEaters">
+            Death Eaters
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="sortingHat.js">
+    </script>
   </body>
 </html>
