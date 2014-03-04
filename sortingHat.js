@@ -1,4 +1,6 @@
 var studentCount = 0;
+var capacity = 0;
+
 var button = document.getElementById("set_student_count");
 
 function countEvent() {
@@ -8,6 +10,7 @@ function countEvent() {
     var inputVal = document.getElementById("student_count").value;
     // updating studentCount by inputVal. Passed through parseInt so that it's a number!
     studentCount += Number(inputVal);
+    capacity = Math.floor(StudentCount/5) + 1;
     // Updating the HTML (the div id of count) so the current count displays. 
     countVar.innerHTML = Number(studentCount);
     // resetting the value of the form to 0
@@ -31,14 +34,16 @@ function generateRandomHouse(){
     return randHouse;
 }
 
+
+//student count is broken. I'm not even sure how its broken right now...
+//student count is changing, has to do with scoping and globals.
 function sortStudents() {
-    var originalStudentCount = studentCount;
-    console.log("this is the original student count" + originalStudentCount);
+    console.log("this is the new student count" + studentCount);
     var studentName = document.getElementById("student_name");
-    var capacity = originalStudentCount/listOfHouses.length;
+
     console.log("This is the capacity: " + capacity);
 
-    if (originalStudentCount > 1){
+    if (studentCount !== 1){
         var randHouse = generateRandomHouse();
         console.log("This is the length of the random house" + randHouse.length);
         while (randHouse.length == capacity) {
